@@ -2,7 +2,12 @@
 package DesignPattern;
 
 public class ICPP extends TemplateDeImpostoCondicional{
-
+    
+    public ICPP(Imposto outroImposto){
+        super(outroImposto);
+    }
+    public ICPP(){}
+    
     @Override
     public boolean deveUsarMaximaTaxacao(Orcamento orcamento) {
         return orcamento.getValor() > 500.0;

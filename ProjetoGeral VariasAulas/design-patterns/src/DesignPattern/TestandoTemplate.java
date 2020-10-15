@@ -6,6 +6,7 @@ public class TestandoTemplate {
     public static void main(String[] args) {
         Imposto icpp = new ICPP();
         Imposto ikcv = new IKCV();
+        Imposto ihit = new IHIT();
         
         Item caneta = new Item("Caneta", 250.0);
         Item lapis = new Item("Lapis", 250.0);
@@ -15,6 +16,8 @@ public class TestandoTemplate {
         Orcamento orcamento2 = new Orcamento(499);
         Orcamento orcamento3 = new Orcamento(1000);
         Orcamento orcamento4 = new Orcamento(1000);
+        Orcamento orcamento5 = new Orcamento(1000);
+        Orcamento orcamento6 = new Orcamento(1000);
         
         CalculadorDeImpostos calculador = new CalculadorDeImpostos();
         
@@ -24,11 +27,16 @@ public class TestandoTemplate {
         orcamento2.adicionaItem(caneta);
         orcamento3.adicionaItem(lapis);
         orcamento4.adicionaItem(lapisBarato);
+        orcamento5.adicionaItem(lapis);
+        orcamento6.adicionaItem(lapis);
+        orcamento6.adicionaItem(lapis);
         
         calculador.realizaCalculo(orcamento1, icpp);
         calculador.realizaCalculo(orcamento2, icpp);
         calculador.realizaCalculo(orcamento3, ikcv);
         calculador.realizaCalculo(orcamento4, ikcv);
+        calculador.realizaCalculo(orcamento5, ihit);
+        calculador.realizaCalculo(orcamento6, ihit);
     }
     
 }
